@@ -65,6 +65,16 @@ export function alert() {
       level: 2,
     });
     alerts.push(make_stock_list(soon_expired, base_date));
+    const soon_expired_amount = soon_expired
+      .map((i) => i.amount)
+      .reduce((a, b) => a + b, 0);
+    const after_exp_amount = living_stocks - soon_expired_amount;
+    const after_exp_days = Math.floor(after_exp_amount / 3);
+    alerts.push({
+      paragraph: [
+        `三ヶ月後には残り ${after_exp_days} 日分（${after_exp_amount}食分）になります`,
+      ],
+    });
   }
 
   if (alerts.length > 0) {
