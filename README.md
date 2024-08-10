@@ -17,4 +17,5 @@ It sends a mail if at least one of the following criteria is met:
 3. Copy `.clasp.example.json` as `.clas.json` and set `scriptId` attribute accordingly.
 4. Configure `EMAIL` script property to the address to send an email.
 5. Set the trigger event appropriately.
-6. :+1:
+6. `clamp push`
+7. :+1:
